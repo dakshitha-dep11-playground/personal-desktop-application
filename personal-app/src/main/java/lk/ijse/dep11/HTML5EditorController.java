@@ -1,13 +1,19 @@
 package lk.ijse.dep11;
 
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HTML5EditorController {
 
@@ -53,9 +59,36 @@ public class HTML5EditorController {
         primaryStage.show();
     }
 
-    public void menuItemAboutUsSetOnAction(ActionEvent actionEvent) {
+    public void menuItemAboutUsSetOnAction(ActionEvent actionEvent) throws IOException {
+        AnchorPane aboutUsRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/AboutUs.fxml")));
+        Scene aboutUsScene = new Scene(aboutUsRoot);
+
+        Stage primaryStage = new Stage();
+        primaryStage.setScene(aboutUsScene);
+        //primaryStage.setTitle("Text Editor");
+        //primaryStage.setMaximized(true);
+
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        aboutUsRoot.setBackground(Background.fill(Color.TRANSPARENT));
+        aboutUsScene.setFill(Color.TRANSPARENT);
+
+        FadeTransition fade = new FadeTransition(Duration.millis(2000),aboutUsRoot);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.playFromStart();
+
+        primaryStage.setResizable(false);
+        primaryStage.centerOnScreen();
+        primaryStage.alwaysOnTopProperty();
+        primaryStage.sizeToScene();
+        primaryStage.show();
+
+
     }
 
-    public void menuItemUserGuideSetOnAction(ActionEvent actionEvent) {
+    public void menuItemUserGuideSetOnAction(ActionEvent actionEvent) throws IOException {
+        
+
+
     }
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="aboutUsRoot" prefHeight="273.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.AboutUsController">
+   <children>
+      <ImageView fitHeight="712.0" fitWidth="518.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/vecteezy_set-of-luxury-golden-arabic-islamic-banner-title-frame-png_21715782_272.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="239.0" layoutY="90.0" prefHeight="41.0" prefWidth="113.0" text="© Copyright">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="233.0" prefHeight="52.0" prefWidth="113.0" text="Version 1.0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
