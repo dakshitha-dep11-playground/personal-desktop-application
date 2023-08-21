@@ -23,19 +23,21 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        AnchorPane root = FXMLLoader.load(getClass().getResource("/view/MainScene.fxml"));
+        AnchorPane root = FXMLLoader.load(getClass().getResource("/view/HTML5Editor.fxml"));
         Scene mainScene = new Scene(root);
 
         primaryStage.setScene(mainScene);
         primaryStage.setTitle("Splash Screen");
 
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
-        root.setBackground(Background.fill(Color.TRANSPARENT));
-        mainScene.setFill(Color.TRANSPARENT);
+//        primaryStage.initStyle(StageStyle.TRANSPARENT);
+//        root.setBackground(Background.fill(Color.TRANSPARENT));
+//        mainScene.setFill(Color.TRANSPARENT);
 
         primaryStage.centerOnScreen();
         primaryStage.setResizable(false);
         primaryStage.show();
+
+        //primaryStage.close();
 
 
     }

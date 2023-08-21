@@ -4,11 +4,14 @@ import javafx.animation.FadeTransition;
 import javafx.animation.RotateTransition;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+
 
 public class MainSceneController {
     public ImageView imgvSplashScreen;
     public Label lblWelcome;
+    public AnchorPane root;
 
 
     public void initialize(){
@@ -21,6 +24,10 @@ public class MainSceneController {
         fade.setFromValue(0);
         fade.setToValue(1);
         fade.playFromStart();
+
+
+
+
     }
 
 
