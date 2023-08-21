@@ -2,16 +2,19 @@ package lk.ijse.dep11;
 
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
+import java.awt.event.MouseAdapter;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -87,7 +90,19 @@ public class HTML5EditorController {
     }
 
     public void menuItemUserGuideSetOnAction(ActionEvent actionEvent) throws IOException {
-        
+        AnchorPane userGuideRoot = FXMLLoader.load(getClass().getResource("/view/Userguide.fxml"));
+        Scene userGuideScene = new Scene(userGuideRoot);
+
+        Stage primryStage = new Stage();
+        primryStage.setScene(userGuideScene);
+
+        primryStage.initModality(Modality.WINDOW_MODAL);
+        primryStage.initOwner(HTroot.getScene().getWindow());
+
+        primryStage.setTitle("User Guide");
+        primryStage.centerOnScreen();
+        primryStage.alwaysOnTopProperty();
+        primryStage.show();
 
 
     }
